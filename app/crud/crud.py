@@ -1,8 +1,7 @@
 from sqlalchemy.orm import Session
 
-from model.model import Song
-
-from schema.schema import SongInput
+from app.model.model import Song
+from app.schema.schema import SongInput
 
 
 async def select_playlist(db: Session) -> list:

@@ -1,12 +1,12 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from crud.crud import (
+from app.crud.crud import (
     select_playlist,
     insert_playlist,
 )
-from db.session import db_conn
-from schema.schema import (
+from app.db.session import db_conn
+from app.schema.schema import (
     SongInput,
     SongList,
 )

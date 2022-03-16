@@ -1,1 +1,1 @@
-from ..model.model import *
+# Used with Alembic
