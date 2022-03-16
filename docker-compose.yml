@@ -1,0 +1,17 @@
+version: "3"
+services:
+  database:
+    build: ./database
+    ports:
+      - "3306:3306"
+    platform: linux/amd64
+
+  backend:
+    build: .
+    volumes:
+      - ./:/Docker-Test
+    ports:
+      - "8000:8000"
+    depends_on:
+      - database
+    working_dir: /Docker-Test
